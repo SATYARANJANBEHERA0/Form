@@ -1,0 +1,39 @@
+{% extends 'testapp/base.html'%}
+{% block body_block%}
+<br><br><br>
+  <div class="jumbotron">
+    <div class="container">
+    <h1>Student Information</h1>
+    <table border="2">
+      <thead>
+        <th>Firstname</th>
+        <th>LastName</th>
+        <th>Email</th>
+        <th>Password</th>
+        <th>Occupation</th>
+        <th>Dob</th>
+        <th>Image</th>
+        <th>Gender</th>
+        <th>State</th>
+        <th>Country</th>
+        <th>Education</th>
+      </thead>
+      {% for student in student_list%}
+        <tr>
+          <td>{{student.firstname}}</td>
+          <td>{{student.lasttname}}</td>
+          <td>{{student.email}}</td>
+          <td>{{student.password}}</td>
+          <td>{{student.occupation}}</td>
+          <td>{{student.dob}}</td>
+          <td>{{student.image}}</td>
+          <td>{{student.gender}}</td>
+          <td>{{student.state}}</td>
+          <td>{{student.country}}</td>
+          <td>{{student.education}}</td>
+        </tr>
+      {% endfor %}
+    </table>
+    </div>
+  </div>
+{% endblock %}
